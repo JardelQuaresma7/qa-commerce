@@ -1,24 +1,26 @@
 {
-  "name": "qa-commerce",
+  "name": "qa-commerce-tests",
   "version": "1.0.0",
-  "description": "Projeto de simulação de aulas de QA",
+  "description": "Testes automatizados para QA-Commerce com Cypress e Cucumber",
   "main": "index.js",
   "scripts": {
-    "start": "node src/server.js",
-    "db": "node scripts/init_db.js"
+    "test": "cypress open",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^22.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.4",
+    "cypress": "^14.3.2",
+    "esbuild": "^0.25.4"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": "cypress/support/step_definitions/*.js"
+  },
   "dependencies": {
-    "bcrypt": "^5.1.1",
-    "body-parser": "^1.20.3",
-    "express": "^4.21.2",
-    "joi": "^17.13.3",
-    "jsonwebtoken": "^9.0.2",
-    "open": "^10.1.0",
-    "sqlite3": "^5.1.7",
-    "swagger-jsdoc": "^6.2.8",
-    "swagger-ui-express": "^5.0.1"
+    "qa-commerce-tests": "file:"
   }
 }

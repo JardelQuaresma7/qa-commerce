@@ -1,0 +1,11 @@
+Feature: Validação de campos obrigatórios no checkout
+    Como um usuário do sistema
+    Eu quero receber avisos sobre campos obrigatórios não preenchidos
+    Para que eu possa completar meu pedido corretamente
+
+    Scenario: Tentar finalizar o pedido sem preencher os campos obrigatórios
+        Given que estou na página de checkout
+        When tento finalizar o pedido sem preencher os campos obrigatórios
+        Then devo ver mensagens de erro para os campos obrigatórios
+        And  os campos devem ficar com os textos vermelhos
+        And deve ser exibida uma mensagem no header "Por favor, preencha todos os campos obrigatório marcados com asteriscos!"
