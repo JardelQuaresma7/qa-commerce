@@ -92,6 +92,7 @@ npx cypress open (UI)
 ### Apenas testes UI
 Para executar somente os testes de UI:
 ```
+
 npx cypress run --spec "cypress/e2e/features/addToCart.feature"
 npx cypress run --spec "cypress/e2e/features/checkout.feature"
 ```
@@ -99,7 +100,7 @@ npx cypress run --spec "cypress/e2e/features/checkout.feature"
 ### Apenas testes de API
 Antes de executar os testes de API fiz
 a validação dos endpoints pelo Postman:
-```
+
 ![GET Produtos](public/images/GET-PRODUTOS.png)
 ![POST Carrinho](public/images/POST-CARRINHO.png)
 ```

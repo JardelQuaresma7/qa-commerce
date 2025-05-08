@@ -4,10 +4,13 @@
   "description": "Testes automatizados para QA-Commerce com Cypress e Cucumber",
   "main": "index.js",
   "scripts": {
+    "start": "node src/server.js",
+    "db": "node scripts/init_db.js",
     "test": "cypress open",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -21,6 +24,15 @@
     "stepDefinitions": "cypress/support/step_definitions/*.js"
   },
   "dependencies": {
-    "qa-commerce-tests": "file:"
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "express": "^4.21.2",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "open": "^10.1.0",
+    "qa-commerce-tests": "file:",
+    "sqlite3": "^5.1.7",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
   }
 }
